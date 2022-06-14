@@ -1,0 +1,56 @@
+/* Benefits */
+.benefits__list {
+    display: flex;
+    align-items: center;
+}
+
+.benefits__item {
+    flex-basis: calc((100%-3*30px)/4);
+    margin-right: 30px;
+}
+
+.benefits__item:last-child {
+    margin-right: 0;
+}
+
+.benefits__item::before {
+    display: block;
+    content: "";
+    height: 120px;
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(245, 244, 250, 1);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.benefits__item:nth-child(1)::before {
+    background-image: url('../images/icons/antenna.svg');
+}
+
+.benefits__item:nth-child(2)::before {
+    background-image: url('../images/icons/clock.svg');
+}
+
+.benefits__item:nth-child(3)::before {
+    background-image: url('../images/icons/diagram.svg');
+}
+
+.benefits__item:nth-child(4)::before {
+    background-image: url('../images/icons/astronaut.svg');
+}
+
+.benefits__name {
+    color: var(--title-txt-cl);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.benefits__text {
+    font-size: 14px;
+    line-height: 1.71;
+}

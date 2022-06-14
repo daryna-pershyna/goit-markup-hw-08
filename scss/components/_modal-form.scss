@@ -1,0 +1,199 @@
+/* Modal */
+.backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.backdrop.is-hidden .modal {
+    transform: scale(0.3) translate(-50%, -50%);
+}
+
+.modal-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 580px;
+    width: 530px;
+    padding: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: scale(1) translate(-50%, -50%);
+    transition: transform 250ms var(--timing-function);
+}
+
+.modal-box__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--title-txt-cl);
+    margin-bottom: 30px;
+
+}
+
+.modal__label {
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.modal__label-title {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--perrimary-txt-cl);
+    margin-bottom: 4px;
+}
+
+.modal__label-input {
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+    padding: 12px 42px;
+    cursor: pointer;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__label-input:hover,
+.modal__label-input:focus {
+    border: 1px solid var(--accent-cl);
+}
+
+.modal__label-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    fill: rgba(33, 33, 33, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__label-input:hover+.modal__label-icon,
+.modal__label-input:focus+.modal__label-icon {
+    fill: var(--accent-cl);
+}
+
+.modal__label-input:hover,
+.modal__label-input:focus {
+    fill: var(--accent-cl);
+}
+
+.modal__textarea-input {
+    height: 120px;
+    display: flex;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    padding: 12px 16px;
+    resize: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__textarea-input:hover,
+.modal__textarea-input:focus {
+    border: 1px solid var(--accent-cl);
+}
+
+.modal__policy-agree-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__policy-agreement {
+    font-size: 14px;
+    line-height: 1.71;
+    text-decoration-line: underline;
+    color: var(--accent-cl);
+}
+
+.modal__policy-custom-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    border-radius: 2px;
+    width: 16px;
+    height: 15px;
+    margin-right: 9px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__policy-checkbox:checked+.modal__policy-custom-checkbox {
+    background-color: var(--accent-cl);
+    border: var(--accent-cl);
+}
+
+.modal__policy-checkbox:focus+.modal__policy-custom-checkbox,
+.modal__policy-checkbox:hover+.modal__policy-custom-checkbox {
+    border: 2px solid var(--accent-cl);
+}
+
+.modal__checkbox-icon-check {
+    opacity: 0;
+    fill: var(--white-txt-cl);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__policy-checkbox:checked+.modal__policy-custom-checkbox .modal__checkbox-icon-check {
+    opacity: 1;
+}
+
+.modal__policy-agree-text {
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--perrimary-txt-cl);
+}
+
+.btn-checkbox {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.btn-close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "";
+    top: 0;
+    right: 0;
+    margin-top: 8px;
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 6px;
+    cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-close:focus,
+.btn-close:hover {
+    fill: var(--accent-cl);
+}
