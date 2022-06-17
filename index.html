@@ -3,21 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Сайт студии web-разработки WebStudio" />
     <title>Сайт WebStudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer"/>
     <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
     <link rel="stylesheet" href="./css/main.min.css">
   </head>
@@ -30,6 +29,12 @@
             <a class="logo" href="./index.html">
               <span class="logo__text">Web</span>Studio
             </a>
+            <button type="button" class="header__menu-button is-open" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
+              <svg  width="40" height="40" aria-label="переключатель мобильного меню">
+                <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+                <use class="icon-menu-close" href="./images/sprite.svg#icon-menu-close"></use>
+              </svg>
+            </button>
             <ul class="navigation__list">
               <li class="navigation__item">
                 <a href="./index.html" class="navigation__link navigation__link--current">Студия</a>
@@ -39,7 +44,7 @@
               </li>
               <li class="navigation__item">
                 <a href="" class="navigation__link">Контакты</a></li>
-            </ul>
+              </ul>
           </nav>
           <ul class="header__contacts-list">
             <li class="header__contact-item">
@@ -54,6 +59,23 @@
                 </svg>+38 096 111 11 11
               </a>
             </li>
+          </ul>
+        </div>
+        <div class="mobile-menu is-open" id="mobile-menu" data-menu>
+          <ul class="mobile-menu__nav">
+            <li class="mobile-menu__item-nav"><a href="./index.html" class="mobile-menu__link">Студия</a></li>
+            <li class="mobile-menu__item-nav"><a href="./portfolio.html" class="mobile-menu__link">Портфолио</a></li>
+            <li class="mobile-menu__item-nav"><a href="" class="mobile-menu__link">Контакты</a></li>
+          </ul>
+          <ul class="mobile-menu__contacts">
+            <li class="mobile-menu__item-tel"><a href="tel:+380961111111" class="mobile-menu__link"></a>+38 096 111 11 11</li>
+            <li class="mobile-menu__item-mail"><a href="mailto:info@devstudio.com" class="mobile-menu__link">info@devstudio.com</a></li>
+          </ul>
+          <ul class="mobile-menu__socials">
+            <li class="mobile-menu__item-socials"><a href="" class="mobile-menu__link" rel="noopener noreferrer" target="_blank" aria-label="иконка Instagram">Instagram</a></li>
+            <li class="mobile-menu__item-socials"><a href="" class="mobile-menu__link" rel="noopener noreferrer" target="_blank" aria-label="иконка Twitter">Twitter</a></li>
+            <li class="mobile-menu__item-socials"><a href="" class="mobile-menu__link" rel="noopener noreferrer" target="_blank" aria-label="иконка Facebook">Facebook</a></li>
+            <li class="mobile-menu__item-socials"><a href="" class="mobile-menu__link" rel="noopener noreferrer" target="_blank" aria-label="иконка LinkedIn">LinkedIn</a></li>
           </ul>
         </div>
       </section>
@@ -405,7 +427,7 @@
     <!--Подвал сайта-->
     <footer class="footer">
       <div class="footer__container container">
-        <!-- Адреса компании -->
+        
         <div class="address__container">
             <a class="logo footer__logo" href="./index.html" ><span class="logo__text">Web</span><span class="logo__text-end">Studio</span></a>
           <address class="address__company">
@@ -420,7 +442,7 @@
             </ul>
           </address>
         </div>
-        <!-- Ссылки на социальные сети -->
+        
         <div class="invite__container">
           <b class="invite__title">присоединяйтесь</b>
           <ul class="invite__socials-list">
@@ -442,7 +464,7 @@
             </li>
           </ul>
         </div>
-        <!-- Форма для подписkи на рассылку -->
+        
         <div>
           <b class="subscribe__title">Подпишитесь на рассылку</b>
           <form class="subscribe__form" name="subscribe-form" autocomplete="on">
@@ -458,9 +480,9 @@
     <div data-modal  class="backdrop is-hidden">
       <div class="modal-box">
         <b class="modal-box__title">Оставьте свои данные, мы вам перезвоним</b>
-        <!-- Кнопка закрывания модального окна -->
+        
         <button data-modal-close type="button" class="btn-close"><svg class="client-icon" width="18" height="18"><use href="./images/sprite.svg#icon-close"></use></svg></button>
-        <!-- Форма заполнения модального окна -->
+        
         <form class="modal">
           <label class="modal__label"><span class="modal__label-title">Имя</span> 
               <input class="modal__label-input" type="text" name="user-name">
@@ -478,7 +500,7 @@
             <span class="modal__label-title">Комментарий</span> 
             <textarea class="modal__textarea-input" name="feedback" rows="5" placeholder="Введите текст"></textarea>
           </label>
-          <!-- Политика приватности -->
+          
           <label class="modal__policy-agree-label">
             <input class="visually-hidden modal__policy-checkbox" type="checkbox" name="policy-agree" />
             <span class="modal__policy-custom-checkbox">
@@ -490,6 +512,10 @@
         </form> 
       </div>
     </div>
+    
+
+    </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

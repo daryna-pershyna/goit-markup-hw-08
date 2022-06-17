@@ -1,6 +1,11 @@
 /* Skills */
+
 .section.no-padding {
     padding-top: 0;
+
+@media screen and (max-width: 1199.98px ) {
+    display: none;
+    }
 }
 
 .skills__title {
@@ -20,12 +25,11 @@
 .skills__item {
     margin: 0 30px 0 0;
     position: relative;
-}
 
-.skills__item:last-child {
-    margin-right: 0;
+    &:last-child {
+        margin-right: 0;
+    }
 }
-
 .skills__name {
     position: absolute;
     bottom: 0;

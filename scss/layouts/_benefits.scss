@@ -1,16 +1,25 @@
 /* Benefits */
 .benefits__list {
-    display: flex;
+    @media screen and (min-width:768px) {
+        display: flex;
     align-items: center;
+    }
+    
 }
 
 .benefits__item {
-    flex-basis: calc((100%-3*30px)/4);
-    margin-right: 30px;
-}
+    
+    @media screen and (min-width:768px) {
+        flex-wrap: nowrap;
+        margin-right: 30px;
 
-.benefits__item:last-child {
-    margin-right: 0;
+    }
+    @media screen and (min-width:1200px) {
+        flex-basis: calc((100%-3*30px)/4);
+        margin-right: 30px;
+    }
+    &:last-child {
+        margin-right: 0;}
 }
 
 .benefits__item::before {
