@@ -1,4 +1,11 @@
 /* Subscribe */
+.subscribe__container {
+    @media screen and (max-width:479.98px) {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+}
+}
 .subscribe__title {
     display: block;
     font-weight: 700;

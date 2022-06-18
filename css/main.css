@@ -129,6 +129,15 @@ a {
   text-align: center;
 }
 
+@media screen and (max-width: 479.98px) {
+  .btn-flex {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
 .filter__btn {
   color: var(--title-txt-cl);
   background-color: var(--secondary-bg-cl);
@@ -416,6 +425,14 @@ a {
 }
 
 /* Subscribe */
+@media screen and (max-width: 479.98px) {
+  .subscribe__container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
 .subscribe__title {
   display: block;
   font-weight: 700;
@@ -460,7 +477,6 @@ a {
 }
 
 .mobile-menu {
-  display: none;
   z-index: 99;
   position: fixed;
   top: 100%;
@@ -1024,7 +1040,7 @@ a {
 }
 
 @media screen and (max-width: 767.98px) {
-  .clients__list {
+  .clients__item {
     width: calc((100% - 30px) / 2);
     margin-right: 30px;
     margin-bottom: 30px;
@@ -1032,7 +1048,7 @@ a {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .clients__list {
+  .clients__item {
     width: calc((100% - 2 * 30px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
@@ -1040,7 +1056,7 @@ a {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) and (min-width: 1200px) {
-  .clients__list {
+  .clients__item {
     width: calc((100% - 5 * 30px) / 6);
     margin-right: 30px;
     margin-bottom: 30px;
@@ -1114,6 +1130,9 @@ a {
 @media screen and (max-width: 479.98px) {
   .address__container {
     margin-bottom: 60px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1162,6 +1181,7 @@ a {
     margin-bottom: 60px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
   }
 }
 

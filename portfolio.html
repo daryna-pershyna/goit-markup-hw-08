@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Портфолио студии web-разработки WebStudio" />
     <title>Портфолио WebStudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,6 +31,12 @@
             <a class="logo" href="./index.html">
               <span class="logo__text">Web</span>Studio
             </a>
+            <button type="button" class="header__menu-button is-open" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
+              <svg  width="40" height="40" aria-label="переключатель мобильного меню">
+                <use class="icon-menu-close" href="./images/sprite.svg#icon-menu-close"></use>
+                <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+              </svg>
+            </button>
             <ul class="navigation__list">
               <li class="navigation__item">
                 <a href="./index.html" class="navigation__link">Студия</a>
@@ -237,7 +244,7 @@
           </ul>
         </div>
         <!-- Форма для подписkи на рассылку -->
-        <div>
+        <div class="subscribe__container">
           <b class="subscribe__title">Подпишитесь на рассылку</b>
           <form class="subscribe__form" name="subscribe-form" autocomplete="on">
             <label>
