@@ -44,7 +44,10 @@
 .header__menu-button.is-open .icon-menu {
     display: none;
 }
-
+.header__menu-button:hover,
+.header__menu-button:focus {
+    fill: var(--accent-cl);
+}
 
 /* Navigation */
 .navigation {

@@ -462,11 +462,11 @@ a {
 .mobile-menu {
   display: none;
   z-index: 99;
-  position: absolute;
+  position: fixed;
   top: 100%;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: white;
   padding: 48px 40px;
   display: -webkit-box;
@@ -477,6 +477,8 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .mobile-menu.is-open {
@@ -577,6 +579,11 @@ a {
 
 .header__menu-button.is-open .icon-menu {
   display: none;
+}
+
+.header__menu-button:hover,
+.header__menu-button:focus {
+  fill: var(--accent-cl);
 }
 
 /* Navigation */
@@ -735,12 +742,6 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
-}
-
-@media screen and (max-width: 479.98px) {
-  .hero-section {
-    max-width: 480px;
-  }
 }
 
 /* Benefits */
@@ -1023,7 +1024,7 @@ a {
 }
 
 @media screen and (max-width: 767.98px) {
-  .clients__item {
+  .clients__list {
     width: calc((100% - 30px) / 2);
     margin-right: 30px;
     margin-bottom: 30px;
@@ -1031,7 +1032,7 @@ a {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .clients__item {
+  .clients__list {
     width: calc((100% - 2 * 30px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
@@ -1039,11 +1040,15 @@ a {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) and (min-width: 1200px) {
-  .clients__item {
+  .clients__list {
     width: calc((100% - 5 * 30px) / 6);
     margin-right: 30px;
     margin-bottom: 30px;
   }
+}
+
+.clients__item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .clients__item:not(:last-child) {
@@ -1106,6 +1111,12 @@ a {
   margin-right: 70px;
 }
 
+@media screen and (max-width: 479.98px) {
+  .address__container {
+    margin-bottom: 60px;
+  }
+}
+
 .address__company {
   font-style: normal;
 }
@@ -1140,8 +1151,18 @@ a {
 }
 
 /* Invite */
-.invite__container {
-  margin-right: 93px;
+@media screen and (min-width: 769px) {
+  .invite__container {
+    margin-right: 93px;
+  }
+}
+
+@media screen and (max-width: 479.98px) {
+  .invite__container {
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .invite__socials-list {
