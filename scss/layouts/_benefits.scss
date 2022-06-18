@@ -2,20 +2,15 @@
 .benefits__list {
     @media screen and (min-width:768px) {
         display: flex;
-    align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    
 }
 
 .benefits__item {
     
     @media screen and (min-width:768px) {
-        flex-wrap: nowrap;
-        margin-right: 30px;
-
-    }
-    @media screen and (min-width:1200px) {
-        flex-basis: calc((100%-3*30px)/4);
+        flex-basis: calc((100% - 1 * 30px) / 2);
         margin-right: 30px;
     }
     &:last-child {

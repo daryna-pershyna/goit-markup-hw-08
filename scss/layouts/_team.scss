@@ -15,6 +15,8 @@
 .team__list {
     @media screen and (min-width: 768px) {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
     }
 }
@@ -26,11 +28,11 @@
     @media screen and (max-width: 767.98px) {
         margin-bottom: 30px;
     }
-    @media screen and (min-width: 768px) {
-        flex-basis: calc((100%-3*30px)/4);
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
         margin-right: 30px;
-    }
-    
+        margin-bottom: 30px;
+        width: 354px;
+        height: 536px;}
 }
 
 .team__item:last-child {
