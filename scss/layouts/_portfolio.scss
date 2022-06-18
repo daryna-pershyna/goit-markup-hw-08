@@ -2,15 +2,24 @@
 
 /* Filter */
 .filter__list {
+    @media screen and (max-width: 767.98px) {
+        justify-content: start;
+        list-style-type: none;
+    }
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 34px;
+    flex-wrap: wrap;
 }
 
 .filter__item {
     margin-right: 8px;
+    @media screen and (min-width: 480px) {
+        margin-bottom: 12px;
+    }
 }
+    
 
 .filter__item:last-child {
     margin-right: 0;

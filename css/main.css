@@ -69,6 +69,7 @@ a {
 }
 
 .container {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -127,15 +128,10 @@ a {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-}
-
-@media screen and (max-width: 479.98px) {
-  .btn-flex {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .filter__btn {
@@ -1251,10 +1247,27 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 34px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767.98px) {
+  .filter__list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    list-style-type: none;
+  }
 }
 
 .filter__item {
   margin-right: 8px;
+}
+
+@media screen and (min-width: 480px) {
+  .filter__item {
+    margin-bottom: 12px;
+  }
 }
 
 .filter__item:last-child {
