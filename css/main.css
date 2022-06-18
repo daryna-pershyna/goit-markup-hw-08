@@ -184,6 +184,7 @@ a {
   opacity: 1;
   -webkit-transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
   transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -214,6 +215,13 @@ a {
   transition: -webkit-transform 250ms var(--timing-function);
   transition: transform 250ms var(--timing-function);
   transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
+}
+
+@media screen and (max-width: 1200px) {
+  .modal-box {
+    height: 609px;
+    width: 450px;
+  }
 }
 
 .modal-box__title {
@@ -453,11 +461,12 @@ a {
 
 .mobile-menu {
   display: none;
-  position: fixed;
-  top: 0;
+  z-index: 99;
+  position: absolute;
+  top: 100%;
   left: 0;
-  width: 100vw;
-  height: 100%vh;
+  width: 100%;
+  height: 100%;
   background-color: white;
   padding: 48px 40px;
   display: -webkit-box;
@@ -467,7 +476,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: 999;
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
@@ -553,15 +561,21 @@ a {
   z-index: 100000;
 }
 
-.header__menu-button .icon-menu {
+@media screen and (min-width: 768px) {
+  .header__menu-button {
+    display: none;
+  }
+}
+
+.header__menu-button .icon-menu-close {
   display: none;
 }
 
-.header__menu-button.is-open .icon-menu {
+.header__menu-button.is-open .icon-menu-close {
   display: block;
 }
 
-.header__menu-button.is-open .icon-menu-close {
+.header__menu-button.is-open .icon-menu {
   display: none;
 }
 
@@ -721,6 +735,12 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 479.98px) {
+  .hero-section {
+    max-width: 480px;
+  }
 }
 
 /* Benefits */

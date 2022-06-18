@@ -1,7 +1,6 @@
 /* Hero */
 .hero-section {
     
-    
     height: 600px;
     max-width: 1600px;
     margin-left: auto;
@@ -23,6 +22,10 @@
         letter-spacing: 0.06em;
         text-transform: uppercase;
         margin-bottom: 30px;
+    }
+    @media screen and (max-width: 479.98px) {
+        max-width: 480px;
+        
     }
 }
 
