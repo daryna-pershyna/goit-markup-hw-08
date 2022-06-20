@@ -133,15 +133,28 @@
           <h2 class="skills__title">Чем мы занимаемся</h2>
           <ul class="skills__list">
             <li class="skills__item">
-              <img class="img" src="./images/box1-lg.jpg" alt="планшет на столе" width="370" />
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./images/box1-lg.webp x1, ./images/box1-lg@2x.webp x2" type="image/webp">
+                <source media="(min-width: 1200px)" srcset="./images/box1-lg.jpg x1, ./images/box1-lg@2x.jpg x2" type="image/jpg">
+                <img class="img" src="./images/box1-lg.jpg" alt="планшет на столе" width="370" height="294" loading="lazy"/>
+              </picture>
+              
               <h3 class="skills__name">Десктопные приложения</h3>
             </li>
             <li class="skills__item">
-              <img class="img" src="./images/box2-lg.jpg" alt="телефон в руке" width="370" />
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./images\box2-lg.webp x1, ./images\box2-lg@2x.webp x2" type="image/webp">
+                <source media="(min-width: 1200px)" srcset="./images\box2-lg.jpg x1, ./images\box2-lg@2x.jpg x2" type="image/jpg">
+                <img class="img" src="./images\box2-lg.jpg" alt="телефон в руке" width="370" height="294" loading="lazy"/>
+              </picture>
               <h3 class="skills__name">Мобильные приложения</h3>
             </li>
             <li class="skills__item">
-              <img class="img" src="./images/box3-lg.jpg" alt="спектр цветов" width="370" />
+              <picture>
+                <source media="(min-width:1200px)" srcset="./images/box3-lg.webp x1, ./images/box3-lg@2x.webp x2" type="image/webp">
+                <source media="(min-width:1200px)" srcset="./images/box3-lg.jpg x1, ./images/box3-lg@2x.jpg x2" type="image/jpg">
+                <img class="img" src="./images/box3-lg.jpg" alt="спектр цветов" width="370" height="294" loading="lazy"/>
+              </picture>
               <h3 class="skills__name">Дизайнерские решения</h3>
             </li>
           </ul>
@@ -154,7 +167,19 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img class="team__img img" src="./images/img1-sm.jpg" alt="фото Игорь Демьяненко" width="450" height="460"/>
+              <picture>
+                <!-- Для десктопа -->
+                <source media="(min-width:1200px)" srcset="./images/img1-lg.webp x1, ./images/img1-lg@2x.webp x2" type="image/webp">
+                <source media="(min-width:1200px)" srcset="./images/img1-lg.jpg x1, ./images/img1-lg@2x.jpg x2" type="image/jpg">
+                <!-- Для таблетки -->
+                <source media="(min-width:768px)" srcset="./images/img1-md.webp x1, ./images/img1-md@2x.webp x2" type="image/webp">
+                <source media="(min-width:768px)" srcset="./images/img1-md.jpg x1, ./images/img1-md@2x.jpg x2" type="image/jpg">
+                <!-- Для телефона -->
+                <source media="(max-width:767.98px)" srcset="./images/ima1-sm.webp x1, ./images/img1-sm@2x.webp x2" type="image/webp">
+                <source media="(max-width:767.98px)" srcset="./images/img1-sm.jpeg x1, ./images/img1-sm@2x.jpg x2" type="image/jpg">
+                <!-- По умолчанию -->
+                <img class="team__img img" src="./images/img1-sm.jpg" alt="фото Игорь Демьяненко" width="450" height="460" loading="lazy"/>
+              </picture>
               <div class="employee">
                 <h3 class="employee__name">Игорь Демьяненко</h3>
                 <p class="employee__position">UI Designer</p>
@@ -210,7 +235,21 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__img img" src="./images/img2-sm.jpg" alt="фото Ольга Репина" width="450" height="460" />
+
+              <picture>
+                <!-- Для десктопа -->
+                <source media="(min-width: 1200px)" srcset="./images/img2-lg.webp x1, ./images/img2-lg@2x.webp x2" type="image/webp">
+                <source media="(min-width: 1200px)" srcset="./images/img2-lg.jpg x1, ./images/img2-lg@2x.jpg x2" type="image/jpg">
+                <!-- Для таблетки -->
+                <source media="(min-width: 768px)" srcset="./images/img2-md.webp x1, ./images/img2-md@2x.webp x2" type="image/webp">
+                <source media="(min-width: 768px)" srcset="./images/img2-md.jpg x1, ./images/img2-md@2x.jpg x2" type="image/jpg">
+                <!-- Для телефона -->
+                <source media="(max-width: 767.98px)" srcset="./images/img2-sm.webp x1, ./images/img2-sm@2x.webp x2" type="image/webp">
+                <source media="(max-width: 767.98px)" srcset="./images/img2-sm.jpeg x1, ./images/img2-sm@2x.jpg x2" type="image/jpg">
+                <!-- По умолчанию -->
+                <img class="team__img img" src="./images/img2-sm.jpg" alt="фото Ольга Репина" width="450" height="460" loading="lazy"/>
+              </picture>
+              
               <div class="employee">
                 <h3 class="employee__name">Ольга Репина</h3>
                 <p class="employee__position">Marketing</p>
@@ -267,7 +306,20 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__img img" src="./images/img3-sm.jpg" alt="фото Николай Тарасов" width="450" height="460" />
+              <picture>
+                <!-- Для десктопа -->
+                <source media="(min-width:1200px)" srcset="./images/img3-lg.webp x1, ./images/img3-lg@2x.webp x2" type="image/webp">
+                <source media="(min-width:1200px)" srcset="./images/img3-lg.jpg x1, ./images/img3-lg@2x.jpg x2" type="image/jpg">
+                <!-- Для таблетки -->
+                <source media="(min-width:768px)" srcset="./images/img3-md.webp x1, ./images/img3-md@2x.webp x2" type="image/webp">
+                <source media="(min-width:768px)" srcset="./images/img3-md.jpg x1, ./images/img3-md@2x.jpg x2" type="image/jpg">
+                <!-- Для телефона -->
+                <source media="(max-width:767.98px)" srcset="./images/img3-sm.webp x1, ./images/img3-sm@2x.webp x2" type="image/webp">
+                <source media="(max-width:767.98px)" srcset="./images/img3-sm.jpeg x1, ./images/img3-sm@2x.jpg x2" type="image/jpg">
+                <!-- По умолчанию -->
+                <img class="team__img img" src="./images/img3-sm.jpg" alt="фото Николай Тарасов" width="450" height="460" loading="lazy"/>
+              </picture>
+
               <div class="employee">
                 <h3 class="employee__name">Николай Тарасов</h3>
                 <p class="employee__position">Frontend Developer</p>
@@ -324,7 +376,20 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__img img" src="./images/img4-sm.jpg" alt="фото Михаил Ермаков" width="450" height="460" />
+              <picture>
+                <!-- Для десктопа -->
+                <source media="(min-width:1200px)" srcset="./images/img4-lg.webp x1, ./images/img4-lg@2x.webp x2" type="image/webp">
+                <source media="(min-width:1200px)" srcset="./images/img4-lg.jpg x1, ./images/img4-lg@2x.jpg x2" type="image/jpg">
+                <!-- Для таблетки -->
+                <source media="(min-width:768px)" srcset="./images/img3-md.webp x1, ./images/img4-md@2x.webp x2" type="image/webp">
+                <source media="(min-width:768px)" srcset="./images/img4-md.jpg x1, ./images/img4-md@2x.jpg x2" type="image/jpg">
+                <!-- Для телефона -->
+                <source media="(max-width:767.98px)" srcset="./images/img4-sm.webp x1, ./images/img4-sm@2x.webp x2" type="image/webp">
+                <source media="(max-width:767.98px)" srcset="./images/img4-sm.jpeg x1, ./images/img4-sm@2x.jpg x2" type="image/jpg">
+                <!-- По умолчанию -->
+                <img class="team__img img" src="./images/img4-sm.jpg" alt="фото Михаил Ермаков" width="450" height="460" loading="lazy"/>
+              </picture>
+
               <div class="employee">
                 <h3 class="employee__name">Михаил Ермаков</h3>
                 <p class="employee__position">Product Designer</p>

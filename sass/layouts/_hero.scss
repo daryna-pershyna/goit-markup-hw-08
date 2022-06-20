@@ -6,6 +6,8 @@
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/header-img-sm.jpg');
+    background-image: -webkit-image-set(url('../images/header-img-sm.webp') 1x),
+            linear-gradient(to bottom, #191c26, #191c26);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-color: rgba(47, 48, 58, 0.4);
@@ -13,19 +15,38 @@
     text-align: center;
     padding-top: 118px;
     padding-bottom: 118px;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/header-img-sm@2x.jpg');
+        background-image: -webkit-image-set(url('../images/header-img-sm@2x.webp') 2x),
+                linear-gradient(to bottom, #191c26, #191c26);
+    }
 
     @media screen and (min-width: 768px) {
         height: 400px;
         max-width: 768px;
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/header-img-md.jpg');
+        background-image: -webkit-image-set(url('../images/header-img-md.webp') 1x),
+                linear-gradient(to bottom, #191c26, #191c26);
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/header-img-md@2x.jpg');
+            background-image: -webkit-image-set(url('../images/header-img-md@2x.webp') 2x),
+                    linear-gradient(to bottom, #191c26, #191c26);
+        }
     }
     @media screen and (min-width: 1200px) {
         height: 600px;
         max-width: 1600px;
         padding-top: 200px;
         padding-bottom: 200px;
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/header-img-lg.jpg');
+        background-image: -webkit-image-set(url('../images/header-img-lg@2x.webp') 1x),
+                linear-gradient(to bottom, #191c26, #191c26);
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/header-img-lg@2x.jpg');
+            background-image: -webkit-image-set(url('../images/header-img-lg@2x.webp') 2x),
+                    linear-gradient(to bottom, #191c26, #191c26);
+        }
     }
-    
-
     &__title {
         color: var(--white-txt-cl);
         font-weight: 900;
