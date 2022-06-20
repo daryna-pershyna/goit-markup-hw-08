@@ -154,9 +154,13 @@ a {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  padding-bottom: 25px;
-  padding-top: 24px;
-  margin-right: 93px;
+  margin-right: 88px;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    padding-bottom: 25px;
+    padding-top: 24px;
+  }
 }
 .logo__text {
   color: var(--accent-cl);
@@ -565,7 +569,7 @@ a {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  min-width: 358px;
+  min-width: 450px;
   height: 50px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -573,10 +577,12 @@ a {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
 }
-@media screen and (min-width: 480px) and (max-width: 1199.98px) {
+@media screen and (min-width: 1200px) {
   .subscribe__email {
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    min-width: 358px;
   }
 }
 
@@ -611,6 +617,7 @@ a {
 }
 
 .header__menu-button {
+  cursor: pointer;
   margin: 0;
   padding: 0;
   border: none;
@@ -620,7 +627,7 @@ a {
   position: absolute;
   display: block;
   right: 10px;
-  top: 35px;
+  top: 25px;
   fill: rgb(33, 33, 33);
   z-index: 100000;
 }
@@ -761,11 +768,16 @@ a {
 }
 
 .header__contact-item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .header__contact-item:not(:last-child) {
     margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contact-item:not(:last-child) {
+    margin-right: 50px;
   }
 }
 
@@ -805,8 +817,8 @@ a {
   background-color: rgba(47, 48, 58, 0.4);
   background-size: cover;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
 }
 @media screen and (min-width: 768px) {
   .hero-section {
@@ -818,16 +830,23 @@ a {
   .hero-section {
     height: 600px;
     max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 .hero-section__title {
   color: var(--white-txt-cl);
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .hero-section__title {
+    font-size: 44px;
+  }
 }
 
 /* Benefits */
