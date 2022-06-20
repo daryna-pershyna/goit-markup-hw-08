@@ -751,7 +751,7 @@ a {
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .header__contacts-list {
     display: block;
-    margin-left: 84px;
+    margin-left: 64px;
   }
 }
 
@@ -1325,7 +1325,7 @@ a {
 .filter__item {
   margin-right: 8px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 768px) {
   .filter__item {
     margin-bottom: 12px;
   }
@@ -1336,31 +1336,59 @@ a {
 }
 
 /* Activities */
-.grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: -30px 0 0 -30px;
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 -30px 0 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .grid__item {
   margin: 30px 0 0 30px;
 }
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .grid__item {
+    width: calc((100% - 60px) / 2);
+    margin: 0 30px 0 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .grid__item {
+    width: calc((100% - 90px) / 3);
+    margin: 0 30px 0 0;
+  }
+}
+
+.grid__item:not(:last-child) {
+  margin-bottom: 30px;
+}
 
 .activiti__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transition: -webkit-box-shadow 250ms var(--timing-function);
   transition: -webkit-box-shadow 250ms var(--timing-function);
   transition: box-shadow 250ms var(--timing-function);
   transition: box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+  height: 100%;
 }
 
 .activiti__link:hover,
@@ -1404,6 +1432,9 @@ a {
 }
 
 .activiti__card {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 20px 24px;
   border: 1px solid rgb(238, 238, 238);
   border-top: none;
