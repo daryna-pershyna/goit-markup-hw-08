@@ -906,9 +906,6 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -940,6 +937,9 @@ a {
   }
 }
 
+.benefits__item:not(:last-child) {
+  margin-bottom: 30px;
+}
 @media screen and (min-width: 1200px) {
   .benefits__item:not(:last-child) {
     margin-right: 30px;
@@ -1267,14 +1267,16 @@ a {
 }
 
 /* Addresses */
-.address__container {
-  margin-right: 70px;
-}
 @media screen and (max-width: 767.98px) {
   .address__container {
     margin-bottom: 60px;
     text-align: center;
     margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .address__container {
     margin-right: auto;
   }
 }
@@ -1313,9 +1315,9 @@ a {
 }
 
 /* Invite */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .invite__container {
-    margin-right: 93px;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -1426,7 +1428,7 @@ a {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 0 -30px 0 0;
+    margin: -30px 0 0 -30px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1445,18 +1447,14 @@ a {
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .grid__item {
     width: calc((100% - 60px) / 2);
-    margin: 0 30px 0 0;
+    margin: 30px 0 0 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .grid__item {
     width: calc((100% - 90px) / 3);
-    margin: 0 30px 0 0;
+    margin: 30px 0 0 30px;
   }
-}
-
-.grid__item:not(:last-child) {
-  margin-bottom: 30px;
 }
 
 .activiti__link {
